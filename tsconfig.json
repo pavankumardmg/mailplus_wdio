@@ -1,0 +1,55 @@
+{
+    "compileOnSave": true,
+    "compilerOptions": {
+      "rootDir": "src",
+      "experimentalDecorators": true,
+      "outDir": "build",
+      "module": "CommonJS",
+      "target": "ESNext",
+      "lib": [
+        "ESNext"
+      ],
+      "sourceMap": true,
+      "strictPropertyInitialization": false,
+      "resolveJsonModule": true,
+      "esModuleInterop": true,
+      "moduleResolution": "node",
+      "allowSyntheticDefaultImports": true,
+      "skipLibCheck": true,
+      "watch": true,
+      "pretty": true,
+      "types": [
+        "node",
+        "webdriverio/async",
+        "@wdio/cucumber-framework",
+        "expect-webdriverio"
+      ],
+      "allowJs": true,
+      "importHelpers": true,
+      "baseUrl": "./src",
+      "paths": {
+        "@helpers/*": [
+          "./helpers/*"
+        ],
+        "restClient": [
+          "./clients/RestClient.ts"
+        ],
+        "@pages/*": [
+          "./pages/*"
+        ],
+      }
+    },
+    "exclude": [
+      "node_modules"
+    ],
+    "include": [
+      "src/**/*.ts"
+    ],
+    "ts-node": {
+      "require": [
+        "tsconfig-paths/register"
+      ],
+      "files": true,
+      "transpileOnly": true
+    }
+  }
