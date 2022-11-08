@@ -12,7 +12,6 @@ Modules involved:
 - Webdriver-IO Remote Runner for cloud provider for cross os and platform testing
 - Webdriver-IO Cucumber Framework 
 - Chai for Object level assertion
-- Webdriver-IO element level assertion
 - Axios for API calls
 - ESLint and Prettier for better code style
 
