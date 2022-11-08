@@ -1,17 +1,19 @@
 Introduction
 
-- Perform E2E test with this project for web application. It help you to directly build the gherkin style testcases without creating the helpers.
+- Perform acceptance test with this project for web and mobile application. It enables the cross browser and cross platform test
 
 How to write scenarios:
 
-- For better understanding, please go through the UI and API scenario examples under the resouces/feature directory.
+- For better understanding, please go through the UI and API scenario examples under the features directory.
 
 Modules involved:
 
-- Cucumber Latest version as a test Runner
-- Playwright Latest version for UI and API components
+- Webdriver-IO built-in Local Runner for local test
+- Webdriver-IO Remote Runner for cloud provider for cross os and platform testing
+- Webdriver-IO Cucumber Framework 
 - Chai for Object level assertion
-- Playwright test used for element level assertion.
+- Webdriver-IO element level assertion
+- Axios for API calls
 - ESLint and Prettier for better code style
 
 Recommended Editor:
