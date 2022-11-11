@@ -5,4 +5,6 @@ export default class HomePage extends Basepage {
   async open() {
     await super.open('app/puzzle-bundles/20221023/mail-plus-preview/index.html#/daily-puzzles/2022-10-23');
   }
+  
+
 }

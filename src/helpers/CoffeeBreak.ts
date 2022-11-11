@@ -1,5 +1,24 @@
 import { plainToInstance } from 'class-transformer';
-export class CoffeeBreak {
+import RestClient from 'restClient';
+import loadash from 'lodash';
+
+export default class CoffeeBreak {
+  private coffeBreak: CoffeeBreakMapper;
+
+  async load() {
+    let api = new RestClient('https://static-platypuzz.s3.amazonaws.com');
+    await api.get('/dev/coffeebreak/bundles/20211002/mail-plus-preview/data/coffeebreak.js');
+    this.coffeBreak = CoffeeBreakMapper.parse(api.lastResponse.data as string);
+  }
+  private get getData() {
+    return this.coffeBreak;
+  }
+
+  filterGamesByTitle(value: string) {
+    return loadash.find(this.getData.games, { title: value });
+  }
+}
+export class CoffeeBreakMapper {
   version: string;
   published: boolean;
   publication: string;
@@ -9,7 +28,7 @@ export class CoffeeBreak {
   games: Game[];
 
   static parse(data: string) {
-    return plainToInstance(CoffeeBreak, JSON.parse(data.replace('var coffeebreak_data =', '')));
+    return plainToInstance(CoffeeBreakMapper, JSON.parse(data.replace('var coffeebreak_data =', '')));
   }
 }
 

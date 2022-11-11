@@ -1,4 +1,4 @@
-Feature: Mail online Puzzles
+Feature: Mail+ Puzzles
 
   Scenario: Verify puzzle page
     When user loads puzzle page

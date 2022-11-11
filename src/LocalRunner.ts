@@ -1,9 +1,6 @@
 import { ITestCaseHookParameter } from '@cucumber/cucumber';
 import type { Options } from '@wdio/types';
-import HomePage from './pages/HomePage';
-import RestClient from 'restClient';
-import { CoffeeBreak } from '@helpers/CoffeeBreak';
-import lodash from 'lodash';
+import { loadPages } from '@helpers/LoadPages';
 
 export const config: Options.Testrunner = {
   automationProtocol: 'webdriver',
@@ -58,10 +55,6 @@ export const config: Options.Testrunner = {
   },
 
   beforeScenario: async function (world: ITestCaseHookParameter, context: object) {
-    global.homePage = new HomePage();
-    let api = new RestClient('https://static-platypuzz.s3.amazonaws.com');
-    await api.get('/dev/coffeebreak/bundles/20211002/mail-plus-preview/data/coffeebreak.js');
-    let resp = CoffeeBreak.parse(api.lastResponse.data as string);
-    console.log(lodash.find(resp.games, { title: 'GuessWord' }).data.solution);
+    await loadPages();
   },
 };

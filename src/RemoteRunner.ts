@@ -35,7 +35,16 @@ export const config: Options.Testrunner = {
         sessionName: 'OS X Catalina Safari 13.1',
         os: 'OS X',
         osVersion: 'Catalina',
-      },
+      }
+    }
+      ,
+      {
+      browserName: 'Safari',
+      browserVersion: '12.1',
+      'bstack:options': {
+        os: 'OS X',
+        osVersion: 'Mojave'
+      }
     },
   ],
   // Level of logging verbosity: trace | debug | info | warn | error | silent
