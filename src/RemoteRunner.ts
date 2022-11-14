@@ -5,7 +5,7 @@ import HomePage from './pages/HomePage';
 export const config: Options.Testrunner = {
   hostname: 'hub.browserstack.com',
   user: 'pavanswtjobs_D3JE5n',
-  key: '7zMQaqNSUDA3AusxZ82f',
+  key: '7zMQaqNSUDA3AusxZ8',
   automationProtocol: 'webdriver',
   specs: ['./features/**/*.feature'],
   maxInstances: 3,
