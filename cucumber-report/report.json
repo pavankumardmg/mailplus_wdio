@@ -1,0 +1,152 @@
+[
+  {
+    "description": "Business Need: define the business need for this feature",
+    "elements": [
+      {
+        "description": "",
+        "id": "quickcrossword;play-the-quick-crossword",
+        "keyword": "Scenario",
+        "line": 5,
+        "name": "Play the Quick Crossword",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 208899
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 11236854499
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 6,
+            "name": "user loads puzzle page",
+            "match": {
+              "location": "src\\stepdefs\\steps.ts:3"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 8170031700
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 7,
+            "name": "user select \"Quick Crossword\"",
+            "match": {
+              "location": "src\\stepdefs\\QuickCrossWord.ts:8"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2214511499
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 8,
+            "name": "close the tooltip",
+            "match": {
+              "location": "src\\stepdefs\\QuickCrossWord.ts:12"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 4889811399
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 9,
+            "name": "fill the Across",
+            "match": {
+              "location": "src\\stepdefs\\QuickCrossWord.ts:27"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 36281710998
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 10,
+            "name": "fill the Down",
+            "match": {
+              "location": "src\\stepdefs\\QuickCrossWord.ts:23"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 23148650599
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 11,
+            "name": "user should see \"Congratulations, you’ve completed the puzzle!\" text in Quick Crossword modal",
+            "match": {
+              "location": "src\\stepdefs\\QuickCrossWord.ts:19"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 147057999
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 2342443700
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@ui",
+            "line": 1
+          },
+          {
+            "name": "@puzzles",
+            "line": 1
+          },
+          {
+            "name": "@quickcrossword",
+            "line": 1
+          }
+        ],
+        "type": "scenario"
+      }
+    ],
+    "id": "quickcrossword",
+    "line": 2,
+    "keyword": "Feature",
+    "name": "QuickCrossWord",
+    "tags": [
+      {
+        "name": "@ui",
+        "line": 1
+      },
+      {
+        "name": "@puzzles",
+        "line": 1
+      },
+      {
+        "name": "@quickcrossword",
+        "line": 1
+      }
+    ],
+    "uri": "resources\\features\\ui\\QuickCrossWord.feature"
+  }
+]

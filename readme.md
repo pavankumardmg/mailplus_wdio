@@ -8,10 +8,9 @@ How to write scenarios:
 
 Modules involved:
 
-- Webdriver-IO built-in Local Runner for local test
-- Webdriver-IO Remote Runner for cloud provider for cross os and platform testing
+- Webdriver-IO -Cucumber Runner for local test
+- Webdriver-IO Cucumber for cloud provider for cross os and platform testing
 - Webdriver-IO Cucumber Framework 
-- Chai for Object level assertion
 - Axios for API calls
 - ESLint and Prettier for better code style
 

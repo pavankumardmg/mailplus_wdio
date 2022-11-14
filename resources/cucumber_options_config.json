@@ -1,0 +1,52 @@
+{
+  "default": {
+    "parallel": 1,
+    "backtrace": true,
+    "format": ["summary", "progress-bar", "json:cucumber-report/report.json", "html:cucumber-report/index.html"],
+    "paths": ["resources/features/**/*.feature"],
+    "requireModule": ["ts-node/register"],
+    "require": ["./src/context/*.ts", "./src/stepdefs/**/*.ts"],
+    "tags": "@ui and not @ignore",
+    "retry": 0,
+    "publishQuiet": true
+  },
+  "api": {
+    "parallel": 1,
+    "format": ["summary", "@cucumber/pretty-formatter", "json:cucumber-report/apiReport.json", "html:cucumber-report/index.html"],
+    "paths": ["resources/features/api/*.feature"],
+    "requireModule": ["ts-node/register"],
+    "require": ["./src/context/*.ts", "./src/stepdefs/**/*.ts"],
+    "tags": "@api and not @ignore",
+    "worldParameters": {},
+    "retry": 0
+  },
+  "ui": {
+    "parallel": 1,
+    "backtrace": true,
+    "formatOptions": {
+      "colorsEnabled": true
+    },
+    "format": ["summary", "@cucumber/pretty-formatter", "json:cucumber-report/uiReport.json", "html:cucumber-report/index.html"],
+    "paths": ["resources/features/ui/*.feature"],
+    "requireModule": ["ts-node/register"],
+    "require": ["./src/stepdefs/**/*.ts", "./src/context/*.ts"],
+    "tags": "@ui and not @ignore",
+    "retry": 0
+  },
+
+  "safari-15.6": {
+    "worldParameters": { "browserName": "safari", "browserVersion": "15.6", "os": "OS X", "osVersion": "Monterey" }
+  },
+
+  "safari-14.1": {
+    "worldParameters": { "browserName": "safari", "browserVersion": "14.1", "os": "OS X", "osVersion": "Big Sur" }
+  },
+
+  "safari-13.1": {
+    "worldParameters": { "browserName": "safari", "browserVersion": "13.1", "os": "OS X", "osVersion": "Catalina" }
+  },
+
+  "safari-12.1": {
+    "worldParameters": { "browserName": "safari", "browserVersion": "12.1", "os": "OS X", "osVersion": "Mojave" }
+  }
+}

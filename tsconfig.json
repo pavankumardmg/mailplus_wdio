@@ -1,55 +1,60 @@
 {
-    "compileOnSave": true,
-    "compilerOptions": {
-      "rootDir": "src",
-      "experimentalDecorators": true,
-      "outDir": "build",
-      "module": "CommonJS",
-      "target": "ESNext",
-      "lib": [
-        "ESNext"
-      ],
-      "sourceMap": true,
-      "strictPropertyInitialization": false,
-      "resolveJsonModule": true,
-      "esModuleInterop": true,
-      "moduleResolution": "node",
-      "allowSyntheticDefaultImports": true,
-      "skipLibCheck": true,
-      "watch": true,
-      "pretty": true,
-      "types": [
-        "node",
-        "webdriverio/async",
-        "@wdio/cucumber-framework",
-        "expect-webdriverio"
-      ],
-      "allowJs": true,
-      "importHelpers": true,
-      "baseUrl": "./src",
-      "paths": {
-        "@helpers/*": [
-          "./helpers/*"
-        ],
-        "restClient": [
-          "./clients/RestClient.ts"
-        ],
-        "@pages/*": [
-          "./pages/*"
-        ],
-      }
-    },
-    "exclude": [
-      "node_modules"
+  "compileOnSave": true,
+  "compilerOptions": {
+    "rootDir": "src",
+    "experimentalDecorators": true,
+    "outDir": "build",
+    "module": "CommonJS",
+    "target": "ESNext",
+    "lib": [
+      "ESNext"
     ],
-    "include": [
-      "src/**/*.ts"
+    "sourceMap": true,
+    "strictPropertyInitialization": false,
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
+    "moduleResolution": "node",
+    "allowSyntheticDefaultImports": true,
+    "skipLibCheck": true,
+    "watch": true,
+    "pretty": true,
+    "types": [
+      "node",
+      "webdriverio/async",
+      "expect-webdriverio"
     ],
-    "ts-node": {
-      "require": [
-        "tsconfig-paths/register"
+    "allowJs": true,
+    "importHelpers": true,
+    "baseUrl": "./src",
+    "paths": {
+      "@helpers/*": [
+        "./helpers/*"
       ],
-      "files": true,
-      "transpileOnly": true
+      "testContext": [
+        "./context/TestContext.ts"
+      ],
+      "restClient": [
+        "./clients/RestClient.ts"
+      ],
+      "uiClient": [
+        "./clients/UiClient.ts"
+      ],
+      "@pages/*": [
+        "./pages/*"
+      ],
     }
+  },
+  "exclude": [
+    "node_modules"
+  ],
+  "include": [
+    "src/**/*.ts"
+  ],
+  "ts-node": {
+    "require": [
+      "tsconfig-paths/register"
+    ],
+    "files": true,
+    "transpileOnly": true
   }
+}

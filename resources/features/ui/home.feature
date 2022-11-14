@@ -1,3 +1,4 @@
+@ignore
 Feature: Mail+ Puzzles
 
   Scenario: Verify puzzle page
