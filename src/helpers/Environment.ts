@@ -17,7 +17,7 @@ export function bsCaps(options: BrowserStackType): RemoteOptions {
   const dCaps = defaultCaps(options.browserName);
   dCaps.hostname = 'hub.browserstack.com';
   dCaps.user = 'qatesting_qQK0he';
-  dCaps.key = '41WsaBhxMvNcskxPW';
+  dCaps.key = '41WsaBhxMvNcskxPWR';
   dCaps.capabilities = {
     'bstack:options': {
       buildName: `Mail+ Puzzles Test Automation ${options.os}_${options.osVersion}_${options.browserName}_${options.browserVersion}`,
