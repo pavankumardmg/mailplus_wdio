@@ -1,79 +1,82 @@
 {
-    "root": true,
-    "parser": "@typescript-eslint/parser",
-    "parserOptions": {
-        "ecmaVersion": "latest",
-        "sourceType": "module",
-        "project": "tsconfig.json",
-        "include": "./src/**/*.ts"
-    },
-    "plugins": [
-        "@typescript-eslint",
-        "prettier"
+  "root": true,
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaVersion": "latest",
+    "sourceType": "module",
+    "project": "tsconfig.json",
+    "include": "./src/**/*.ts"
+  },
+  "plugins": [
+    "@typescript-eslint",
+    "prettier"
+  ],
+  "extends": [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/eslint-recommended",
+    "plugin:@typescript-eslint/recommended",
+    "prettier"
+  ],
+  "ignorePatterns": [
+    "node_modules",
+    "src/pages/Basepage.ts",
+    "src/helpers/CoffeeBreak.ts",
+    "src/helpers/LoadPages.ts"
+  ],
+  "rules": {
+    "prettier/prettier": "off",
+    "eqeqeq": "error",
+    "no-else-return": "error",
+    "arrow-spacing": "error",
+    "comma-spacing": "error",
+    "getter-return": "error",
+    "arrow-parens": "error",
+    "sort-imports": "error",
+    "no-multi-spaces": "error",
+    "no-extra-semi": "error",
+    "semi": "error",
+    "no-multiple-empty-lines": "error",
+    "require-await": "error",
+    "no-empty-function": "error",
+    "@typescript-eslint/quotes": [
+      "error",
+      "single"
     ],
-    "extends": [
-        "eslint:recommended",
-        "plugin:@typescript-eslint/eslint-recommended",
-        "plugin:@typescript-eslint/recommended",
-        "prettier"
+    "@typescript-eslint/member-ordering": [
+      "error"
     ],
-    "ignorePatterns": [
-        "node_modules", "src/LocalRunner.ts", "src/RemoteRunner.ts", "src/pages/Basepage.ts", "src/helpers/CoffeeBreak.ts"
+    "@typescript-eslint/naming-convention": [
+      "error",
+      {
+        "selector": [
+          "variableLike",
+          "method",
+          "memberLike"
+        ],
+        "format": [
+          "camelCase"
+        ]
+      },
+      {
+        "selector": [
+          "property"
+        ],
+        "format": [
+          "camelCase"
+        ],
+        "leadingUnderscore": "allow"
+      },
+      {
+        "selector": "typeLike",
+        "format": [
+          "PascalCase"
+        ]
+      },
+      {
+        "selector": "objectLiteralProperty",
+        "format": null
+      }
     ],
-    "rules": {
-        "prettier/prettier": "off",
-        "eqeqeq": "error",
-        "no-else-return": "error",
-        "arrow-spacing": "error",
-        "comma-spacing": "error",
-        "getter-return": "error",
-        "arrow-parens": "error",
-        "sort-imports": "error",
-        "no-multi-spaces": "error",
-        "no-extra-semi": "error",
-        "semi": "error",
-        "no-multiple-empty-lines": "error",
-        "require-await": "error",
-        "no-empty-function": "error",
-        "@typescript-eslint/quotes": [
-            "error",
-            "single"
-        ],
-        "@typescript-eslint/member-ordering": [
-            "error"
-        ],
-        "@typescript-eslint/naming-convention": [
-            "error",
-            {
-                "selector": [
-                    "variableLike",
-                    "method",
-                    "memberLike"
-                ],
-                "format": [
-                    "camelCase"
-                ]
-            },
-            {
-                "selector": [
-                    "property"
-                ],
-                "format": [
-                    "camelCase"
-                ],
-                "leadingUnderscore": "allow"
-            },
-            {
-                "selector": "typeLike",
-                "format": [
-                    "PascalCase"
-                ]
-            },
-            {
-                "selector": "objectLiteralProperty",
-                "format": null
-            }
-        ],
-        "@typescript-eslint/no-unused-vars": "error"
-    }
+    "@typescript-eslint/no-unused-vars": "error"
+  }
 }
