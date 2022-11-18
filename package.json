@@ -9,10 +9,12 @@
     "lint": "eslint . --ext .ts",
     "eslint-fix": "eslint . --ext .ts --fix",
     "pretest": "npm run compile && rimraf cucumber-report && mkdirp cucumber-report && mkdirp cucumber-report/screenshots",
-    "s12": "set remote=true & cucumber-js -c resources/cucumber_options_config.json -p ui -p safari-12.1",
-    "s13": "set remote=true & cucumber-js -c resources/cucumber_options_config.json -p ui -p safari-13.1",
-    "s14": "set remote=true & cucumber-js -c resources/cucumber_options_config.json -p ui -p safari-14.1",
-    "s15": "set remote=true & cucumber-js -c resources/cucumber_options_config.json -p default -p safari-15.6"
+    "chrome": "cucumber-js -c resources/cucumber_options_config.json -p ui -p chrome",
+    "edge": "cucumber-js -c resources/cucumber_options_config.json -p ui -p edge",
+    "safari:12": "set remote=true & cucumber-js -c resources/cucumber_options_config.json -p ui -p safari-12.1",
+    "safari:13": "set remote=true & cucumber-js -c resources/cucumber_options_config.json -p ui -p safari-13.1",
+    "safari:14": "set remote=true & cucumber-js -c resources/cucumber_options_config.json -p ui -p safari-14.1",
+    "safari:15": "set remote=true & cucumber-js -c resources/cucumber_options_config.json -p default -p safari-15.6"
   },
   "keywords": [
     "E2E",
