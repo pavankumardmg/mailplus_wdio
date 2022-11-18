@@ -1,4 +1,4 @@
-Introduction
+Introduction:
 
 - Perform acceptance test with this project for web and mobile application. It enables the cross browser and cross platform test
 
@@ -8,7 +8,7 @@ How to write scenarios:
 
 Modules involved:
 
-- Webdriver-IO -Cucumber Runner for local test
+- Webdriver-IO -Cucumber Runner for local test 
 - Webdriver-IO Cucumber for cloud provider for cross os and platform testing
 - Webdriver-IO Cucumber Framework 
 - Axios for API calls
